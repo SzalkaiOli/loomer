@@ -1,0 +1,30 @@
+{
+  "name": "loomer-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MPL-2.0",
+  "scripts": {
+    "dev:ui": "pnpm --filter @loomer/desktop-ui start",
+    "build:ui": "pnpm --filter @loomer/desktop-ui build",
+    "dev": "cargo tauri dev --config crates/loomer-tauri/tauri.conf.json",
+    "build": "cargo tauri build --config crates/loomer-tauri/tauri.conf.json",
+    "lint": "oxlint && oxfmt --check",
+    "typecheck": "pnpm --filter \"./packages/**\" run typecheck"
+  },
+  "devDependencies": {
+    "@angular/cli": "^19.2.0",
+    "@angular-devkit/build-angular": "^19.2.0",
+    "@tauri-apps/cli": "^2.2.0",
+    "oxfmt": "^0.41.0",
+    "oxlint": "^1.86.0",
+    "typescript": "~5.8.0"
+  },
+  "dependencies": {
+    "@angular/common": "^19.2.0",
+    "@angular/compiler": "^19.2.0",
+    "@angular/core": "^19.2.0",
+    "@angular/platform-browser": "^19.2.0",
+    "@tauri-apps/api": "^2.2.0",
+    "rxjs": "~7.8.0"
+  }
+}

@@ -1,0 +1,35 @@
+[package]
+name = "loomer-tauri"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[build-dependencies]
+tauri-build = { version = "2.0", features = [] }
+
+[dependencies]
+loomer-core = { path = "../loomer-core" }
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+uuid.workspace = true
+url.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+
+# Tauri v2 + Multi-Webview (unstable)
+tauri = { version = "2.2", features = ["unstable", "macos-private-api"] }
+tauri-plugin-single-instance = "2.2"
+tauri-plugin-shell = "2.2"
+tauri-plugin-dialog = "2.2"
+tauri-plugin-clipboard-manager = "2.2"
+
+# Nativ Acrylic (Win 11) es Vibrancy (macOS) uveghatas
+window-vibrancy = "0.5"
+# Rendszer-kulcstarto a PasswordStore-hoz (M4-T1)
+keyring = { version = "3.6", features = ["apple-native", "windows-native", "sync-secret-service"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "0.5"
+objc2-foundation = "0.2"

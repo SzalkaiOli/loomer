@@ -1,0 +1,9 @@
+// packages/desktop-ui/tsconfig.app.json
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc"
+  },
+  "files": ["src/main.ts"],
+  "include": ["src/**/*.d.ts"]
+}

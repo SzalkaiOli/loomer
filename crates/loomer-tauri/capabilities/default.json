@@ -1,0 +1,19 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "loomer-ui-capabilities",
+  "description": "Kizárólag a Loomer saját UI rétegei (main shell és ui-overlay) férhetnek hozzá a Tauri IPC-hez.",
+  "windows": ["main"],
+  "webviews": ["main", "ui-overlay"],
+  "permissions": [
+    "core:default",
+    "core:event:default",
+    "core:window:default",
+    "core:window:allow-minimize",
+    "core:window:allow-toggle-maximize",
+    "core:window:allow-close",
+    "core:window:allow-start-dragging",
+    "core:webview:default",
+    "dialog:default",
+    "clipboard-manager:allow-write-text"
+  ]
+}
